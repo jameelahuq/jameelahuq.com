@@ -26,7 +26,17 @@ img {
 
 .nameBar h1 {
 	font-size: 52px;
-	font-weight:bold;
+	font-weight: bold;
+}
+
+.navBar {
+	margin-left: 30px;
+}
+
+.navBar li {
+	display: inline;
+	margin-right: 20px;
+	font-size: 20px;
 }
 
 /*codeBit grid*/
@@ -46,8 +56,11 @@ img {
 	margin-bottom: 20px;
 }
 
+.codeBit .desc {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
 /* bubble wrap */
-
 #bubbleWrap .makeBubbles div {
 	background-color: #fff;
 	border-radius: 50%;
@@ -112,3 +125,26 @@ img {
   display: inline-block;
   font-family: arial,sans-serif;
 }
+
+#focusIn {
+	width: auto;
+}
+
+#magnifyingArea {
+	width: auto;
+	text-align: center;
+	cursor: none;
+}
+
+#magnifyingGlass {
+	display: none;
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	border-radius: 100%;
+	background-repeat: no-repeat;
+	margin-top: -100px;
+	/*background: url(../../Program_Blog/Focus_In/worldsfair11-hr.jpg) 20px 20px;*/
+}
+
+

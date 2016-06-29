@@ -17,28 +17,33 @@
       console.log(event);
       //console.log(event.clientX-magAreaX, magAreaY-event.clientY);
       $magGlass.css({
-        'top' : event.pageY + 'px',
-        'left' : event.pageX + 'px',
+        'top' : Number(event.pageY) + 'px',
+        'left' : Number(event.pageX) + 'px',
         //'background-image': 'url(Program_Blog/Focus_In/worldsfair11-hr.jpg)'
 
-        'background': 'url(Program_Blog/Focus_In/worldsfair11-hr.jpg)' +
-        (magAreaX - event.clientX+100)*imageRatio+ "px " + (magAreaY - event.clientY-190)*imageRatio + "px"
+        //'background-position': (magAreaX - event.clientX)*imageRatio+ "px " + (magAreaY - event.clientY-360)*imageRatio + "px"
 
       });
+
     });
 
     //the magnifying glass will disappear when the cursor leaves
-    $magArea.mouseleave(function(event) {
-      $magGlass.css({
-        'display': 'none'
-      })
-    });
-
-    $magArea.mouseenter(function(event) {
-      $magGlass.css({
-        'display': 'inherit'
-      })
-    });
+    //$magArea.mouseleave(function(event) {
+    //
+    //  $magGlass.css({
+    //    'display': 'none'
+    //  });
+    //
+    //  $('body').css({
+    //    'cursor':'default'
+    //  })
+    //});
+    //
+    //$magArea.mouseenter(function(event) {
+    //  $magGlass.css({
+    //    'display': 'inherit'
+    //  })
+    //});
 
   });
 })();

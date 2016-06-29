@@ -6,16 +6,20 @@ body {
   background: -o-linear-gradient(right, #4527A0, #0085B2); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(right, #4527A0, #0085B2); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to right, #4527A0 , #0085B2); /* Standard syntax */
-  border: deeppink 1px solid;
   font-family: "Josefin Sans", helvetica, arial, sans-serif;
 }
 
-ul, header, footer {
-  border: deeppink 1px solid;
+footer {
+  border: black 2px solid;
 }
 
-a:visited {
+a, a:visited {
+  text-decoration: underline;
   color: #fffde7;
+}
+
+button a {
+  text-decoration: none;
 }
 
 h1 {
@@ -24,16 +28,30 @@ h1 {
   font-weight: 700;
 }
 
+h2 {
+  font-family: "Josefin Sans", helvetica, arial, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-family: "Josefin Sans", helvetica, arial, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
 /*heading elements*/
 .nameBar {
   position: relative;
   height: 100px;
   display: flex;
   align-items: center;
+  padding: 0 10%;
 }
 .nameBar h1 {
   display: inline-block;
-  margin-left: 10%;
 }
 
 .socialLinksTop {
@@ -80,6 +98,10 @@ h1 {
   margin-right: 0;
 }
 
+.navBar a {
+  text-decoration: none;
+}
+
 /*Personal intro elements*/
 .selfIntro {
   background-color: rgba(0, 0, 0, .5);
@@ -92,48 +114,52 @@ h1 {
   margin-bottom: 25px;
 }
 
-.primaryIntro h2{
-  font-family: "Josefin Sans", helvetica, arial, sans-serif;
-  font-weight: 700;
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-
 button.actionIntro {
   background-color: transparent;
   border: 2px solid #FFFDE7;
   border-radius: 10px;
   padding: 10px 25px;
-  margin: 25px;
+  margin: 25px 400px;
+  width: 180px;
   font-weight: 700;
-}
-
-.secondaryIntro h3{
-  font-family: "Josefin Sans", helvetica, arial, sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  margin-bottom: 8px;
 }
 
 /*codeBit elements*/
 .codeBit {
   border-radius: 10px;
   background-color: rgba(0, 0, 0, .5);
+  height: 150px;
   width: 980px;
+  border: 2px solid black;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding-right: 25px;
   margin-left: 10%;
   margin-bottom: 25px;
 }
 
 .codeBit, .codeBit img {
-  height: 150px;
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
 }
 
-li.codeBit > * {
-  display: inline-block;
+.codeBit a {
+  height: 146px;
+}
 
+.codeBit img {
+  border-right: black 2px solid;
+  max-height: 100%;
+  margin-right: 25px;
+}
+
+.codeBitDesc span {
+  display: block
+}
+
+.codeBitDesc .updated {
+  margin-top: 10px;
 }
 
 /*footer elements*/
@@ -142,9 +168,11 @@ footer {
   font-size: 16px;
   text-align: center;
   margin-bottom: 20px;
+  padding: 10px;
 }
 
 .socialLinksBottom li {
+  margin: 6px 10px 0 0;
   display: inline-block;
 }
 

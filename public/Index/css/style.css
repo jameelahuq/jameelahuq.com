@@ -1,111 +1,156 @@
-/*font-family: "Trebuchet MS",helvetica,arial,sans-serif;*/
 body {
-	/*font-family: garamond,times,serif;*/
-	font-size: 16px;
-	color: #ffff99;
-	background-color: #000;
+  box-sizing: border-box;
+	color: #fffde7;
+	background-color: #4527A0;
+  background: -webkit-linear-gradient(left, #4527A0 , #0085B2); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #4527A0, #0085B2); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #4527A0, #0085B2); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #4527A0 , #0085B2); /* Standard syntax */
   border: deeppink 1px solid;
+  font-family: "Josefin Sans", helvetica, arial, sans-serif;
 }
 
 ul, header, footer {
   border: deeppink 1px solid;
 }
 
-/*heading elements*/
+a:visited {
+  color: #fffde7;
+}
+
 h1 {
-  font-size: 42px;
+  font-size: 48px;
   font-family: "Josefin Sans", helvetica, arial, sans-serif;
+  font-weight: 700;
 }
 
-/*codeBit grid*/
-.codePortfolio {
-  margin-left: 30px;
-  margin-right: 50px;
+/*heading elements*/
+.nameBar {
+  position: relative;
+  height: 100px;
+  display: flex;
+  align-items: center;
 }
-
-.codeBit {
+.nameBar h1 {
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 10%;
 }
 
-/*codeBit style*/
-.update, .bitTitle {
-	display: block;
-	margin-bottom: 20px;
+.socialLinksTop {
+  display: inline-block;
+  margin-left: auto;
+
 }
 
-.codeBit .desc {
-	margin-top: 10px;
-	margin-bottom: 10px;
+.socialLinksTop li {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, .5);
+  height: 48px;
+  width: 48px;
+  border-radius: 100%;
+  font-size: 33px;
+  text-align: center;
 }
 
+.socialLinksTop .fa {
+  font-size: 30px;
+  margin-top: 8px;
+  color: #fffde7
+}
+
+.navBar {
+  background-color: rgba(0, 0, 0, .5);
+  height: 40px;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.navBar li {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.navBar li:first-child {
+  margin-left: 10%;
+}
+
+.navBar li:last-child {
+  margin-right: 0;
+}
+
+/*Personal intro elements*/
+.selfIntro {
+  background-color: rgba(0, 0, 0, .5);
+  width: 980px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 25px;
+  font-size: 20px;
+  margin-left: 10%;
+  margin-bottom: 25px;
+}
+
+.primaryIntro h2{
+  font-family: "Josefin Sans", helvetica, arial, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+button.actionIntro {
+  background-color: transparent;
+  border: 2px solid #FFFDE7;
+  border-radius: 10px;
+  padding: 10px 25px;
+  margin: 25px;
+  font-weight: 700;
+}
+
+.secondaryIntro h3{
+  font-family: "Josefin Sans", helvetica, arial, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+/*codeBit elements*/
+.codeBit {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, .5);
+  width: 980px;
+  box-sizing: border-box;
+  margin-left: 10%;
+  margin-bottom: 25px;
+}
+
+.codeBit, .codeBit img {
+  height: 150px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+li.codeBit > * {
+  display: inline-block;
+
+}
+
+/*footer elements*/
+footer {
+  background-color: rgba(0, 0, 0, .5);
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.socialLinksBottom li {
+  display: inline-block;
+}
+
+/* focusIn elements*/
 .centeringContainer {
 	text-align: center;
-}
-/* bubble wrap */
-#bubbleWrap .makeBubbles div {
-	background-color: #fff;
-	border-radius: 50%;
-	display: inline-block;
-	width: 50px;
-  height: 50px;
-	position: relative;
-	border: solid 2px #000;
-	opacity: .7;
-}
-
-
-#bubbleWrap form {
-	display: inline;
-}
-
-#bubbleWrap form input {
-	width: auto;
-	padding: 2px;
-}
-
-#bubbleWrap .create
- {
-	border-radius: 0px;
-	width: auto;
-	padding: 4px;
-	height: auto;
-	display: inline;
-}
-
-/*Poke My Cat*/
-#petPoke {
-  float: right;
-}
-
-#petPoke img,
-#petPoke .results {
-	/*margin-top: 100px;
-	text-align: center; */
-  display: block;
-	width: 180px;
-  margin-right: 15px;
-}
-
-@media (max-width: 360px) {
-	#petPoke img {
-		width: 50%;
-	}
-
-  #petPoke {
-    float: inherit;
-  }
-}
-
-#petPoke .results {
-  margin-top: 4px;
-  padding: 20px;
-  color: #000;
-  background-color: #fff;
-  border-radius: 40px;
-  overflow: hidden;
-  display: inline-block;
-  font-family: arial,sans-serif;
 }
 
 #focusIn {
@@ -132,12 +177,6 @@ h1 {
 	border-radius: 100%;
 	background-repeat: no-repeat;
 	background-image: url("../../Program_Blog/Focus_In/worldsfair11-hr.jpg");
-
-	/*background: url(../../Program_Blog/Focus_In/worldsfair11-hr.jpg) 20px 20px;*/
-}
-
-#magnifyingGlass img {
-
 }
 
 div#magnifyingArea:hover #magnifyingGlass {

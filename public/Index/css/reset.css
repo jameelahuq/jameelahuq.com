@@ -50,4 +50,7 @@ table {
 button {
 	padding: 0;
 	border: 0;
+	font-size: inherit;
+	font-family: inherit;
+	color: inherit;
 }

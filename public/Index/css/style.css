@@ -1,30 +1,15 @@
-@font-face {
-  /* TODO: usually font-family comes first */
-  src: url(../resources/fonts/gotham-book.otf);
-  font-family: Gotham;
-}
-
 body {
   box-sizing: border-box;
 	color: #fffde7;
-	background-color: #4527A0;
-  /* TODO: remove prefixed variants of linear-gradient, it's widely supported already */
-  background: -webkit-linear-gradient(left, #4527A0 , #0085B2); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, #4527A0, #0085B2); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, #4527A0, #0085B2); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, #4527A0 , #0085B2); /* Standard syntax */
+  background: #4527A0 linear-gradient(to right, #4527A0 , #0085B2);
   font-family: "Lato", helvetica, arial, sans-serif;
+  font-size: 20px;
   font-weight: 300;
-  /* TODO: remove */
-/*TODO: do I need these now that I have viewport set?*/
-  /*width: 100%;*/
-  /*background-repeat: no-repeat;*/
-  /*background-attachment: fixed;*/
 }
 
 footer {
-  /* TODO: footer should not have left and right border */
-  border: black 2px solid;
+  border-top: black 2px solid;
+  border-bottom: black 2px solid;
 }
 
 a, a:visited {
@@ -32,32 +17,43 @@ a, a:visited {
   color: #fffde7;
 }
 
-h1 {
-  /* TODO: It can be nice to define a base font size on the body (16px) and make these font sizes percentages of that
-     (300% in this case). Then when you have responsive breakpoints, you can change the body's font size and everything
-     else adjusts proportionally. */
-  font-size: 48px;
-  /* TODO: roll up the font-family and font-weight styles into one rule targeting h1, h2, h3 */
+h1, h2, h3 {
   font-family: "Josefin Sans", helvetica, arial, sans-serif;
   font-weight: 700;
 }
 
+h1 {
+  font-size: 240%;
+}
+
 h2 {
-  font-family: "Josefin Sans", helvetica, arial, sans-serif;
-  font-weight: 700;
-  font-size: 30px;
+  font-size: 150%;
   margin-bottom: 10px;
 }
 
 h3 {
-  font-family: "Josefin Sans", helvetica, arial, sans-serif;
-  font-weight: 700;
-  font-size: 24px;
+  font-size: 120%;
   margin-bottom: 8px;
 }
 
-/* TODO: good to put each selector on a new line for readability */
-.nameBar, .navBar ul, .selfIntro, .codeBit {
+p {
+  margin: 12px 0;
+}
+
+.hidden-text {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+h1, header .social-links, nav ul li:first-child, section, figure {
+  margin-left: 7px;
+  margin-right: 7px;
+}
+
+.name-bar,
+nav ul,
+main {
   box-sizing: border-box;
   max-width: 980px;
   margin-left: auto;
@@ -65,85 +61,82 @@ h3 {
 }
 
 /*heading elements*/
-.nameBar {
-  position: relative; /* TODO: remove (used?) */
+.name-bar {
   height: 100px;
   display: flex;
   align-items: center;
-  max-width: 980px; /* TODO: remove (redundant) */
 }
-.nameBar h1 {
+
+.name-bar h1 {
   display: inline-block;
 }
 
-.socialLinksTop {
-  display: inline-block; /* TODO: why needed? */
+header .social-links {
   margin-left: auto;
 }
 
-.socialLinksTop li {
+header .social-links li {
   display: inline-block;
   background-color: rgba(0, 0, 0, .5);
   height: 48px;
   width: 48px;
-  border-radius: 100%; /* TODO: 50% is the proper value for this */
-  font-size: 33px; /* TODO: remove (unused?) */
+  line-height: 48px;
+  border-radius: 50%;
   text-align: center;
+  font-size: 150%;
 }
 
-.socialLinksTop .fa {
-  font-size: 30px;
-  margin-top: 8px; /* TODO: center these programmatically, perhaps line-height: 48px on the li */
-  color: #fffde7 /* TODO: color: inherit? (is it not this color automatically?) */
+/*TODO: center more*/
+header .social-links li a {
+  height: 100%;
+  width: 100%;
+  display: block;
 }
 
-.navBar {
+nav {
+  min-height: 40px;
   background-color: rgba(0, 0, 0, .5);
   margin-bottom: 25px;
 }
 
-.navBar ul {
+nav ul {
   height: 100%;
-  font-size: 24px;
+  font-size: 120%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 
-.navBar li {
+nav li {
   display: inline-block;
   margin-right: 40px;
 }
 
-.navBar li:last-child {
+nav li:last-child {
   margin-right: 0;
 }
 
-.navBar a {
+nav a {
   text-decoration: none;
 }
 
 /*Personal intro elements*/
-.selfIntro {
+section {
   background-color: rgba(0, 0, 0, .5);
   max-width: 980px;
   box-sizing: border-box;
   border-radius: 10px;
   border: 2px solid black;
   padding: 25px;
-  font-size: 20px; /* TODO: this should probably come from the body */
   margin-bottom: 25px;
 }
 
-.actionIntro {
-  width: 100%; /* TODO: not needed I think */
+.callToAction {
   text-align: center;
-  margin: 10px 0; /* TODO: you should set some default like this on all <p> elements, not just here */
 }
 
-.actionIntro a {
+.callToAction a {
   display: inline-block;
-  width: 133px; /* TODO: don't hard code this */
   border: 2px solid #FFFDE7;
   border-radius: 10px;
   padding: 10px 25px;
@@ -151,7 +144,7 @@ h3 {
 }
 
 /*codeBit elements*/
-.codeBit {
+figure {
   border-radius: 10px;
   background-color: rgba(0, 0, 0, .5);
   height: 150px;
@@ -162,47 +155,33 @@ h3 {
   align-items: center;
   padding-right: 25px;
   margin-bottom: 25px;
+  overflow: hidden;
 }
 
-.codeBit, .codeBit img {
-  /* TODO: replace with overflow: hidden on the container */
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
-}
-
-.codeBit a {
-  height: 146px; /* TODO: size should be set on the image itself, this is confusing and will cause issues when you add other links besides the image */
-}
-
-.codeBit img {
+figure img {
   border-right: black 2px solid;
-  max-height: 100%; /* Just height: 150px, width: 150px */
+  height: 150px;
+  width: 150px;
   margin-right: 25px;
-}
-
-.codeBitDesc span {
-  display: block /* TODO: add semicolon, use <p> instead of <span> to get this by default. <p> in general should wrap content that appears on it's own line(s), while <span>
-                    should wrap inline content within sentences / paragraphs that need special treatment. */
-}
-
-.codeBitDesc .updated {
-  margin-top: 10px; /* TODO: again, should be set globally on <p> tags, not on a case by case basis */
 }
 
 /*footer elements*/
 footer {
   background-color: rgba(0, 0, 0, .5);
-  font-size: 16px;
+  font-size: 80%;
   text-align: center;
   margin-bottom: 20px;
   padding: 10px;
 }
 
-.socialLinksBottom li {
-  /* TODO: margin-top should come instead from above <p> tag's margin-bottom */
-  /* TODO: make sure last li element doesn't have margin-right */
-  margin: 6px 10px 0 0;
+footer .social-links li {
+  margin-bottom: 12px;
+  margin-right: 6px;
   display: inline-block;
+}
+
+footer .social-links li:last-child {
+  margin-right: 0;
 }
 
 /* focusIn elements*/

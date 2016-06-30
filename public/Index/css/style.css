@@ -7,6 +7,10 @@ body {
   background: -moz-linear-gradient(right, #4527A0, #0085B2); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to right, #4527A0 , #0085B2); /* Standard syntax */
   font-family: "Josefin Sans", helvetica, arial, sans-serif;
+/*TODO: do I need these now that I have viewport set?*/
+  /*width: 100%;*/
+  /*background-repeat: no-repeat;*/
+  /*background-attachment: fixed;*/
 }
 
 footer {
@@ -40,6 +44,13 @@ h3 {
   font-weight: 700;
   font-size: 24px;
   margin-bottom: 8px;
+}
+
+.nameBar, .selfIntro, .codeBit {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  /*border: hotpink 2px solid;*/
 }
 
 /*heading elements*/

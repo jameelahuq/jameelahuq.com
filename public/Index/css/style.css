@@ -46,11 +46,11 @@ h3 {
   margin-bottom: 8px;
 }
 
-.nameBar, .selfIntro, .codeBit {
+.nameBar, .navBar ul, .selfIntro, .codeBit {
+  box-sizing: border-box;
   max-width: 980px;
   margin-left: auto;
   margin-right: auto;
-  /*border: hotpink 2px solid;*/
 }
 
 /*heading elements*/
@@ -59,7 +59,6 @@ h3 {
   height: 100px;
   display: flex;
   align-items: center;
-  padding-left:10%;
   max-width: 980px;
 }
 .nameBar h1 {
@@ -91,19 +90,19 @@ h3 {
 .navBar {
   background-color: rgba(0, 0, 0, .5);
   height: 40px;
+  margin-bottom: 25px;
+}
+
+.navBar ul {
+  height: 100%;
+  font-size: 24px;
   display: flex;
   align-items: center;
-  font-size: 24px;
-  margin-bottom: 25px;
 }
 
 .navBar li {
   display: inline-block;
   margin-right: 40px;
-}
-
-.navBar li:first-child {
-  margin-left: 10%;
 }
 
 .navBar li:last-child {
@@ -123,7 +122,6 @@ h3 {
   border: 2px solid black;
   padding: 25px;
   font-size: 20px;
-  margin-left: 10%;
   margin-bottom: 25px;
 }
 
@@ -148,7 +146,6 @@ button.actionIntro {
   display: flex;
   align-items: center;
   padding-right: 25px;
-  margin-left: 10%;
   margin-bottom: 25px;
 }
 

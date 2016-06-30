@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <meta charset="utf-8"/>
+<!--TODO: include user-scalable=no in viewport meta-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>
   (function(i,s,o,g,r,a,m) {
@@ -24,11 +25,16 @@
 </head>
 <body>
 
+<!--TODO: remove class-->
 <header class="headerBar">
 
+  <!-- TODO: you can probably replace <div class="nameBar"> with just <section> -->
   <div class="nameBar">
     <h1>Jameela Huq</h1>
+    <!-- TODO: change everything to non-camelcase, rename to social-links and target based on container -->
     <ul class="socialLinksTop">
+      <!-- TODO: accessibility (screen readers need hidden text to know where these links go) -->
+      <!-- TODO: accessibility (every fa element should have aria-hidden="true") -->
       <li class="linkedIn"><a href="https://www.linkedin.com/in/jameelahuq"><i class="fa fa-linkedin"></i></a></li>
       <li class="github"><a href="https://github.com/jameelahuq"><i class="fa fa-github"></i></a></li>
       <li class="twitter"><a href="https://twitter.com/JameelaHuq"><i class="fa fa-twitter"></i></a></li>
@@ -36,6 +42,7 @@
     </ul>
   </div>
 
+  <!-- TODO: <nav> -->
   <div class="navBar">
     <ul>
       <li>Web Development</li>
@@ -47,13 +54,16 @@
 
 </header>
 
+<!--TODO: <main> wrapper for <section> elements -->
 <section class="selfIntro">
+  <!-- TODO: remove these primaryIntro and secondaryIntro divs, not reusable and not needed at all -->
   <div class="primaryIntro">
     <h2>Welcome!</h2>
     <p>This is my website, built by me! I'm a musician, researcher, teacher, and web developer. Take a look at my projects below, or check
     out my blog series "<a href="https://www.linkedin.com/pulse/adventures-algorithms-chapter-4-machine-learning-models-jameela-huq">Adventures in Algorithms</a>" on LinkedIn.</p>
   </div>
 
+  <!-- TODO: class="centered" or something similar, actionIntro is not reusable at all -->
   <p class="actionIntro"> <a href="mailto:jameelahuq@gmail.com">Send me Info!</a></p>
 
   <div class="secondaryIntro">
@@ -63,6 +73,7 @@
 </section>
 
 <section class="codePortfolio">
+  <!-- TODO: just make these top-level sections in <main> with a special class like "project", no list items needed -->
   <ul class="portfolioList">
 
     <!--https://www.capitalwon.com/#/-->
@@ -71,8 +82,10 @@
 
     <li class="codeBit" id="jaqd">
       <a href="  http://jaqd.herokuapp.com/#/home"><img src="Index/resources/pusheen-wiggle-blogger.gif"></a>
+      <!-- TODO: don't think you need the codeBitDesc wrapper -->
       <div class="codeBitDesc">
         <h3>JAQ'd Blog</h3>
+        <!-- TODO: change to <p> descriptions and use blog posts for history -->
         <span class="created">2015 Nov 20</span>
         <span class="updated">Last update: 2015/11/25</span>
       </div>
@@ -154,7 +167,10 @@
 </section>
 
 <footer>
+  <!-- TODO: this should probably be a <p> -->
   <span>Copyright © 2016, Jameela Huq (with a little help from <a href="http://www.pusheen.com/">Pusheen</a>)</span>
+  <!-- TODO: just "social-links" -->
+  <!-- TODO: target="_blank", and optionally add rel="nofollow" to outbound links -->
   <ul class="socialLinksBottom">
     <li><a href="https://www.linkedin.com/in/jameelahuq">LinkedIn</a></li>
     <li><a href="https://github.com/jameelahuq">Github</a></li>

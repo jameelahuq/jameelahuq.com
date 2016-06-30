@@ -1,4 +1,5 @@
 @font-face {
+  /* TODO: usually font-family comes first */
   src: url(../resources/fonts/gotham-book.otf);
   font-family: Gotham;
 }
@@ -7,12 +8,14 @@ body {
   box-sizing: border-box;
 	color: #fffde7;
 	background-color: #4527A0;
+  /* TODO: remove prefixed variants of linear-gradient, it's widely supported already */
   background: -webkit-linear-gradient(left, #4527A0 , #0085B2); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(right, #4527A0, #0085B2); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(right, #4527A0, #0085B2); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to right, #4527A0 , #0085B2); /* Standard syntax */
   font-family: "Lato", helvetica, arial, sans-serif;
   font-weight: 300;
+  /* TODO: remove */
 /*TODO: do I need these now that I have viewport set?*/
   /*width: 100%;*/
   /*background-repeat: no-repeat;*/
@@ -20,6 +23,7 @@ body {
 }
 
 footer {
+  /* TODO: footer should not have left and right border */
   border: black 2px solid;
 }
 
@@ -29,7 +33,11 @@ a, a:visited {
 }
 
 h1 {
+  /* TODO: It can be nice to define a base font size on the body (16px) and make these font sizes percentages of that
+     (300% in this case). Then when you have responsive breakpoints, you can change the body's font size and everything
+     else adjusts proportionally. */
   font-size: 48px;
+  /* TODO: roll up the font-family and font-weight styles into one rule targeting h1, h2, h3 */
   font-family: "Josefin Sans", helvetica, arial, sans-serif;
   font-weight: 700;
 }
@@ -48,6 +56,7 @@ h3 {
   margin-bottom: 8px;
 }
 
+/* TODO: good to put each selector on a new line for readability */
 .nameBar, .navBar ul, .selfIntro, .codeBit {
   box-sizing: border-box;
   max-width: 980px;
@@ -57,18 +66,18 @@ h3 {
 
 /*heading elements*/
 .nameBar {
-  position: relative;
+  position: relative; /* TODO: remove (used?) */
   height: 100px;
   display: flex;
   align-items: center;
-  max-width: 980px;
+  max-width: 980px; /* TODO: remove (redundant) */
 }
 .nameBar h1 {
   display: inline-block;
 }
 
 .socialLinksTop {
-  display: inline-block;
+  display: inline-block; /* TODO: why needed? */
   margin-left: auto;
 }
 
@@ -77,15 +86,15 @@ h3 {
   background-color: rgba(0, 0, 0, .5);
   height: 48px;
   width: 48px;
-  border-radius: 100%;
-  font-size: 33px;
+  border-radius: 100%; /* TODO: 50% is the proper value for this */
+  font-size: 33px; /* TODO: remove (unused?) */
   text-align: center;
 }
 
 .socialLinksTop .fa {
   font-size: 30px;
-  margin-top: 8px;
-  color: #fffde7
+  margin-top: 8px; /* TODO: center these programmatically, perhaps line-height: 48px on the li */
+  color: #fffde7 /* TODO: color: inherit? (is it not this color automatically?) */
 }
 
 .navBar {
@@ -122,19 +131,19 @@ h3 {
   border-radius: 10px;
   border: 2px solid black;
   padding: 25px;
-  font-size: 20px;
+  font-size: 20px; /* TODO: this should probably come from the body */
   margin-bottom: 25px;
 }
 
 .actionIntro {
-  width: 100%;
+  width: 100%; /* TODO: not needed I think */
   text-align: center;
-  margin: 10px 0;
+  margin: 10px 0; /* TODO: you should set some default like this on all <p> elements, not just here */
 }
 
 .actionIntro a {
   display: inline-block;
-  width: 133px;
+  width: 133px; /* TODO: don't hard code this */
   border: 2px solid #FFFDE7;
   border-radius: 10px;
   padding: 10px 25px;
@@ -156,26 +165,28 @@ h3 {
 }
 
 .codeBit, .codeBit img {
+  /* TODO: replace with overflow: hidden on the container */
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
 }
 
 .codeBit a {
-  height: 146px;
+  height: 146px; /* TODO: size should be set on the image itself, this is confusing and will cause issues when you add other links besides the image */
 }
 
 .codeBit img {
   border-right: black 2px solid;
-  max-height: 100%;
+  max-height: 100%; /* Just height: 150px, width: 150px */
   margin-right: 25px;
 }
 
 .codeBitDesc span {
-  display: block
+  display: block /* TODO: add semicolon, use <p> instead of <span> to get this by default. <p> in general should wrap content that appears on it's own line(s), while <span>
+                    should wrap inline content within sentences / paragraphs that need special treatment. */
 }
 
 .codeBitDesc .updated {
-  margin-top: 10px;
+  margin-top: 10px; /* TODO: again, should be set globally on <p> tags, not on a case by case basis */
 }
 
 /*footer elements*/
@@ -188,6 +199,8 @@ footer {
 }
 
 .socialLinksBottom li {
+  /* TODO: margin-top should come instead from above <p> tag's margin-bottom */
+  /* TODO: make sure last li element doesn't have margin-right */
   margin: 6px 10px 0 0;
   display: inline-block;
 }

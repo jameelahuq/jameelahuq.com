@@ -1,7 +1,7 @@
 body {
   box-sizing: border-box;
 	color: #fffde7;
-  background: #4527A0 linear-gradient(to right, #4527A0 , #0085B2);
+  background: #4527A0 linear-gradient(to right, #4527A0 , #0085B2) no-repeat fixed;
   font-family: "Lato", helvetica, arial, sans-serif;
   font-size: 20px;
   font-weight: 300;
@@ -50,13 +50,13 @@ h1,
 nav ul li:first-child,
 section,
 figure {
-  margin-left: 7px;
+  margin-left: 10px;
 }
 
 header .social-links,
 section,
 figure {
-  margin-right: 7px;
+  margin-right: 10px;
 }
 
 .name-bar,
@@ -72,11 +72,20 @@ main {
 .name-bar {
   height: 100px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
 .name-bar h1 {
   display: inline-block;
+}
+
+.show-condensed {
+  display: none;
+}
+
+.hide-condensed {
+  display: none;
 }
 
 header .social-links {
@@ -92,6 +101,7 @@ header .social-links li {
   border-radius: 50%;
   text-align: center;
   font-size: 150%;
+  margin-left: 5px;
 }
 
 /*TODO: center more*/
@@ -143,16 +153,17 @@ section {
   margin-bottom: 25px;
 }
 
-.callToAction {
+.call-to-action {
   text-align: center;
 }
 
-.callToAction a {
+.call-to-action a {
   display: inline-block;
   border: 2px solid #FFFDE7;
   border-radius: 10px;
   padding: 10px 25px;
   font-weight: 700;
+  text-decoration: none;
 }
 
 /*codeBit elements*/
@@ -229,6 +240,85 @@ footer .social-links li:last-child {
 
 div#magnifyingArea:hover #magnifyingGlass {
 	display: block;
+}
+
+@media screen and (max-width: 560px) {
+  body {
+    font-size: 16px;
+  }
+
+
+  /* social-links logic */
+  .show-condensed, .hide-condensed {
+    background: rgba(0,0,0,.5);
+    height: 20px;
+    width: 40px;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
+  .show-condensed {
+    display: inline-block;
+  }
+
+  .hide-condensed {
+    display: none;
+  }
+
+  .show-condensed:hover ~ .hide-condensed {
+    display: inline-block;
+  }
+
+  .show-condensed:hover  {
+    display: none;
+  }
+
+
+  .show-condensed:hover ~ header .social-links {
+    border: solid deeppink 2px;
+    display: block;
+    max-width: 560px;
+    width: 100%;
+    text-align: center;
+  }
+
+
+
+  header .social-links {
+    display: none;
+  }
+
+  nav {
+    margin-bottom: 10px;
+  }
+
+  nav li {
+    margin-right: 20px;
+  }
+
+  nav .full-word {
+    display: none;
+  }
+
+  section {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .call-to-action a {
+    padding: 10px 10px;
+  }
+
+  figure {
+    padding-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  figure img {
+    margin-right: 10px;
+  }
 }
 
 

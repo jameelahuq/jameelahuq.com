@@ -46,8 +46,16 @@ p {
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-h1, header .social-links, nav ul li:first-child, section, figure {
+h1,
+nav ul li:first-child,
+section,
+figure {
   margin-left: 7px;
+}
+
+header .social-links,
+section,
+figure {
   margin-right: 7px;
 }
 
@@ -93,8 +101,12 @@ header .social-links li a {
   display: block;
 }
 
-nav {
+nav,
+nav ul {
   min-height: 40px;
+}
+
+nav {
   background-color: rgba(0, 0, 0, .5);
   margin-bottom: 25px;
 }

@@ -17,6 +17,10 @@ a, a:visited {
   color: #fffde7;
 }
 
+b {
+  font-weight: 700;
+}
+
 h1, h2, h3 {
   font-family: "Josefin Sans", helvetica, arial, sans-serif;
   font-weight: 700;

@@ -274,19 +274,12 @@ div#magnifyingArea:hover #magnifyingGlass {
   #social-link-toggle + label .show-condensed {
     display: inline-block;
     line-height: 30px;
-  }
-
-  #social-link-toggle + label .hide-condensed {
-    display: none
+    transition-duration: 0.3s;
+    transition-property: transform;
   }
 
   #social-link-toggle:checked + label .show-condensed {
-    display: none
-  }
-
-  #social-link-toggle:checked + label .hide-condensed {
-    display: inline-block;
-    line-height: 30px;
+    transform: rotate(180deg);
   }
 
   header .social-links {
@@ -302,10 +295,9 @@ div#magnifyingArea:hover #magnifyingGlass {
 
   #social-link-toggle:checked ~ .social-links {
     height: 0;
-    /*display: none;*/
   }
 
-  .show-condensed, .hide-condensed {
+  .show-condensed {
     background: rgba(0, 0, 0, .5);
     border-radius: 10px;
     width: 40px;

@@ -287,13 +287,15 @@ div#magnifyingArea:hover #magnifyingGlass {
     margin-left: auto;
     display: block;
     position: relative;
-    transition: height .3s;
+    transition: height .3s, opacity .3s;
     height: 0;
     overflow: hidden;
+    opacity: 0;
   }
 
   #social-link-toggle:checked ~ .social-links {
     height: 48px;
+    opacity: 1;
   }
 
   .show-condensed {

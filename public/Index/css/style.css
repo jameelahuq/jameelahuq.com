@@ -290,6 +290,8 @@ div#magnifyingArea:hover #magnifyingGlass {
   }
 
   header .social-links {
+    margin-right: auto;
+    margin-left: auto;
     display: block;
     position: relative;
     transition: height .3s;

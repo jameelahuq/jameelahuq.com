@@ -5,6 +5,7 @@ body {
   font-family: "Lato", helvetica, arial, sans-serif;
   font-size: 20px;
   font-weight: 300;
+  overflow-x: hidden;
 }
 
 footer {
@@ -294,6 +295,7 @@ div#magnifyingArea:hover #magnifyingGlass {
     transition: height .3s;
     height: 48px;
     overflow: hidden;
+    left: 10px;
   }
 
   #social-link-toggle:checked ~ .social-links {

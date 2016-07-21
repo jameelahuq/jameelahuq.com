@@ -288,14 +288,14 @@ div#magnifyingArea:hover #magnifyingGlass {
   }
 
   header .social-links {
-    margin-right: auto;
-    margin-left: auto;
+    width: 100%;
     display: block;
     position: relative;
     transition: height .3s, opacity .3s;
     height: 0;
     overflow: hidden;
     opacity: 0;
+    text-align: center;
   }
 
   #social-link-toggle:checked ~ .social-links {

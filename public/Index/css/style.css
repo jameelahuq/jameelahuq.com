@@ -248,18 +248,18 @@ div#magnifyingArea:hover #magnifyingGlass {
     font-size: 16px;
   }
 
-  #social-link-toggle {
-    position:absolute;
-    appearance:none;
-    cursor:pointer;
-    left:-100%;
-    top:-100%;
-  }
-
   .name-bar h1,
-  #social-link-toggle + label {
+  #social-link-toggle {
     height: 70px;
     line-height: 70px;
+  }
+
+  #social-link-toggle {
+    position: absolute;
+    appearance: none;
+    cursor: pointer;
+    left: -100%;
+    top: -100%;
   }
 
   #social-link-toggle + label {
@@ -267,6 +267,10 @@ div#magnifyingArea:hover #magnifyingGlass {
     cursor: pointer;
     margin-left: auto;
     margin-right: 10px;
+    width: 40px;
+    height: 30px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, .5);
     text-align: center;
     -webkit-font-smoothing: antialiased;
   }
@@ -276,10 +280,11 @@ div#magnifyingArea:hover #magnifyingGlass {
     line-height: 30px;
     transition-duration: 0.3s;
     transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
   }
 
   #social-link-toggle:checked + label .show-condensed {
-    transform: rotate(180deg);
+    transform: rotateX(180deg);
   }
 
   header .social-links {
@@ -296,14 +301,6 @@ div#magnifyingArea:hover #magnifyingGlass {
   #social-link-toggle:checked ~ .social-links {
     height: 48px;
     opacity: 1;
-  }
-
-  .show-condensed {
-    background: rgba(0, 0, 0, .5);
-    border-radius: 10px;
-    width: 40px;
-    height: 30px;
-    -webkit-transition-timing-function: ease-out;
   }
 
   nav,

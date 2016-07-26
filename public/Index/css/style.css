@@ -3,6 +3,7 @@ body {
 	color: #fffde7;
   background: #4527A0 linear-gradient(to right, #4527A0 , #0085B2) no-repeat fixed;
   font-family: "Lato", helvetica, arial, sans-serif;
+  line-height: 1.2;
   font-size: 20px;
   font-weight: 300;
   overflow-x: hidden;

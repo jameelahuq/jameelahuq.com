@@ -294,6 +294,7 @@ div#magnifyingArea:hover #magnifyingGlass {
     position: relative;
     transition: height .3s, opacity .3s;
     height: 0;
+    margin-bottom: 0;
     overflow: hidden;
     opacity: 0;
     text-align: center;
@@ -301,11 +302,11 @@ div#magnifyingArea:hover #magnifyingGlass {
 
   #social-link-toggle:checked ~ .social-links {
     height: 48px;
+    margin-bottom: 10px;
     opacity: 1;
   }
 
-  nav,
-  header .social-links {
+  nav {
     margin-bottom: 10px;
   }
 
